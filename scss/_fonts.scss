@@ -1,0 +1,34 @@
+@import url("https://use.typekit.net/enf0iwy.css");
+
+$font-brusheo: "Brusheo", sans-serif;
+$font-articulat: "articulat-cf", sans-serif;
+$font-articulat-heavy: "articulat-heavy-cf", sans-serif;
+
+$font-body: $font-articulat;
+
+$font-families: (
+    "brusheo": "Brusheo",
+    "articulat": "articulat-cf",
+    "articulat-heavy": "articulat-heavy-cf",
+);
+
+@each $name,
+$font-family in $font-families {
+    .font-#{$name} {
+        font-family: $font-family, sans-serif;
+    }
+}
+
+$asset-path: "../webfonts/";
+
+/* Fonts includer */
+@mixin font-face($font-family, $font-file, $weight: "normal", $style: "normal") {
+    @font-face {
+        font-family: $font-family;
+        src: local($font-file), url($asset-path + $font-file + ".ttf") format("truetype");
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@include font-face("Brusheo", "Brusheo-Typeface", 400);

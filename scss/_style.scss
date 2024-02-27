@@ -1,0 +1,852 @@
+@function imgUrl($file, $path: "background"){
+@return url("../images/" + $path + "/" + $file) no-repeat;
+}
+
+.description {
+    @include media-breakpoint-down(sm) {
+        font-size: 1rem !important;
+    }
+}
+
+header {
+    background: $primary;
+
+    .navigation_bar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        background-color: $primary;
+
+        .capify {
+            padding: 30px;
+            border-radius: 0 0 20px 20px;
+            background: $green;
+
+            @include media-breakpoint-down(sm) {
+                padding: 16px 10px;
+                border-radius: 0 0 11px 11px;
+            }
+        }
+
+        hr {
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+
+            background-color: #9159E8;
+            opacity: 0.2;
+            margin: 0;
+        }
+    }
+
+    .banner {
+        margin-top: 100px;
+        padding: 40px 0 70px;
+
+        @include media-breakpoint-only(md) {
+            margin-top: 160px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            background: $secondary;
+            padding: 40px 0;
+        }
+
+        .banner_left {
+            background: $secondary;
+            height: 100%;
+            border-radius: 20px;
+            padding: 60px;
+            overflow: hidden;
+
+            @include media-breakpoint-down(lg) {
+                padding: 60px 24px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: 15px 0 30px;
+                background: none;
+                border-radius: 0;
+            }
+
+            .form_wrapper {
+                padding: 40px;
+
+                @include media-breakpoint-down(sm) {
+                    padding: 40px 20px;
+                }
+
+                #form-tab-2, #form-tab-3, #form-tab-4, #form-tab-5 {
+                    display: none;
+                }
+
+                input[type="radio"] {
+                    display: none;
+                }
+
+                input[type="radio"]:checked+label {
+                    background: #c2bde5;
+                    color: #ffffff;
+                }
+
+                .loan_type_option {
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(200, 169, 249, 0.2);
+                    padding: 24px 8px 20px;
+                    border-radius: 20px;
+                    text-align: center;
+                    font-weight: 700;
+                    letter-spacing: -0.01em;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: $primary;
+                    cursor: pointer;
+                    transition: 0.2s all;
+
+                    &:hover {
+                        transform: scale(1.05);
+                    }
+                }
+
+                #prevBtn {
+                    cursor: pointer;
+                }
+
+                .rangeform {
+                    .slider {
+                        -webkit-appearance: none;
+                        width: 100%;
+                        height: 25px;
+                        background: $secondary;
+                        outline: none;
+                        border-radius: 50rem;
+
+                        &::-webkit-slider-thumb {
+                            -webkit-appearance: none;
+                            appearance: none;
+                            width: 48px;
+                            height: 48px;
+                            background: $white;
+                            border-radius: 50rem;
+                            cursor: pointer;
+                            box-shadow: 0 0 10px;
+                        }
+
+                        @include media-breakpoint-down(lg) {
+                            height: 16px;
+
+                            &::-webkit-slider-thumb {
+                                width: 32px;
+                                height: 32px;
+                            }
+                        }
+                    }
+
+                    input {
+                        outline: none;
+                    }
+
+                    .years {
+                        .text-col {
+                            width: 80px !important;
+
+                            @include media-breakpoint-down(lg) {
+                                width: 75px !important;
+                            }
+                        }
+
+                        input.text {
+                            max-width: 100% !important;
+                            width: auto !important
+                        }
+                    }
+
+                    .slider1_parent {
+                        font-size: 64px;
+                        line-height: 1;
+                        color: $grey;
+                        font-weight: bold;
+                        font-family: articulat-cf, sans-serif;
+                        margin-left: 0;
+
+                        .title {
+                            margin: 0;
+                            line-height: 1;
+                        }
+
+                        input {
+                            font-family: articulat-cf, sans-serif;
+                            border: none;
+                            height: 64px;
+                            color: $grey;
+                            font-weight: bold;
+                            outline: none;
+                            width: 50%;
+                            margin: 0
+                        }
+
+                        .main_block {
+                            .groove_parent {
+                                height: 52px;
+                                margin: 0;
+
+                                .groove {
+                                    border: none;
+                                    height: 34px;
+                                    border-radius: 50rem;
+
+                                    .fill {
+                                        height: 34px;
+                                        background: $secondary !important;
+                                    }
+                                }
+
+                                .rider {
+                                    width: 48px;
+                                    height: 48px;
+                                    border-radius: 50rem;
+                                    border: none;
+                                }
+                            }
+                        }
+
+                        .slider_range {
+                            display: none;
+                        }
+
+                        @include media-breakpoint-down(lg) {
+                            font-size: 38px;
+                            line-height: 1;
+
+                            .title {
+                                font-size: 30px
+                            }
+
+                            input {
+                                height: 38px;
+                                font-size: 30px;
+                                width: 80%;
+                                line-height: 1;
+                                display: inline-block
+                            }
+
+                            .main_block .groove_parent {
+                                height: 24px;
+
+                                .groove {
+                                    height: 13px;
+
+                                    .fill {
+                                        height: 13px;
+                                    }
+                                }
+
+                                .rider {
+                                    width: 24px;
+                                    height: 24px;
+                                }
+                            }
+                        }
+                    }
+
+                    .years .slider1_parent input {
+                        float: left;
+                        width: 12%;
+                    }
+
+                    select {
+                        background-color: rgba(0, 0, 0, 0);
+                        border: none;
+                        font-size: 64px;
+                        line-height: 1;
+                        font-weight: bold;
+                        color: $grey;
+                        outline: none;
+
+                        @include media-breakpoint-down(lg) {
+                            font-size: 38px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .banner_right {
+            background: imgUrl('banner_right.jpg') center top;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 40px;
+            position: relative;
+
+            @include media-breakpoint-down(xl) {
+                padding: 150px 60px 60px;
+            }
+
+            @include media-breakpoint-down(lg) {
+                padding: 150px 20px 40px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0), #211D1E), imgUrl('banner_right.jpg') center top;
+            }
+
+            .arrow {
+                position: absolute;
+                top: 38%;
+                left: -10rem;
+
+                @include media-breakpoint-down(xl) {
+                    top: -6rem;
+                    left: 37%;
+                    transform: rotate(90deg);
+                }
+
+                @include media-breakpoint-down(lg) {
+                    top: -1rem;
+                }
+            }
+        }
+
+        .cta_slider {
+            margin-top: 60px;
+
+            .slick-track {
+                display: flex;
+                gap: 16px;
+            }
+
+            .slick-slide {
+                height: inherit;
+                background: $tertiary;
+                border-radius: 20px;
+                min-height: 134px;
+                color: $white;
+                padding: 8px 33px;
+                font-size: 1.25rem;
+                line-height: 1;
+                font-weight: 600;
+                text-transform: capitalize;
+
+                @include media-breakpoint-down(sm) {
+                    background: $darker;
+                }
+            }
+
+            .slick-dots {
+                display: flex !important;
+                bottom: -30px;
+                list-style-type: none;
+                justify-content: center;
+
+                li {
+                    margin: 0 4.5px;
+                    width: 13px;
+                    height: 13px;
+
+                    button:before {
+                        width: 13px;
+                        height: 13px;
+                    }
+                }
+
+                button {
+                    display: block;
+                    width: 13px;
+                    height: 13px;
+                    padding: 0;
+                    border: none;
+                    background-color: $secondary-light;
+                    text-indent: -9999px;
+                    border-radius: 50%;
+                    opacity: 0.2;
+                }
+
+                li.slick-active button {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+section.equipment_loan {
+    padding: 140px 0;
+    background-color: $white;
+
+    .loan_card {
+        height: 100%;
+        text-align: center;
+        background: $white;
+        color: $primary;
+        font-size: 24px;
+        font-weight: 800;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        align-items: center;
+        padding: 60px 8px 40px;
+        line-height: 1;
+        box-shadow: 0px 0px 17.247px 5.749px rgba(0, 0, 0, 0.10);
+
+        @include media-breakpoint-down(xl) {
+            font-size: 20px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            font-size: 18px;
+        padding: 24px 8px;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 70px 0;
+    }
+}
+
+section.industry_specialist {
+    padding: 140px 0;
+    background-color: $primary;
+
+    @include media-breakpoint-down(sm) {
+        padding: 70px 0;
+    }
+}
+
+section.equipment-financing {
+    padding: 140px 0;
+    background: #F8F8FC;
+
+    @include media-breakpoint-down(sm) {
+        padding: 70px 0;
+    }
+}
+
+section.loan_security {
+    background-color: $primary;
+    padding: 133px 0 154px;
+
+    @include media-breakpoint-down(sm) {
+        padding: 70px 0;
+    }
+
+    .animated_text {
+        color: $secondary-light;
+        font-size: 2.25rem;
+        line-height: 0.6;
+        text-align: center;
+        font-family: $font-brusheo;
+        animation: bounce 5s infinite;
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(-30px)rotate(-15deg);
+            }
+
+            40% {
+                transform: translateY(-60px)rotate(-15deg);
+            }
+
+            60% {
+                transform: translateY(-45px)rotate(-15deg);
+            }
+        }
+
+        @include media-breakpoint-down(lg) {
+            display: none;
+        }
+    }
+
+    .loans-slider-wrapper {
+        .slick-slide {
+            margin: 0 4px;
+        }
+
+        ul.loans-slider-nav {
+            display: flex;
+            position: relative;
+            padding: 0;
+            margin: 0 0 39px;
+            gap: 9px;
+
+            @include media-breakpoint-down(sm) {
+                margin: 30px 0;
+            }
+
+            li {
+                list-style: none;
+
+                .loan-slider-btn {
+                    transition: 0.5s;
+                    padding: 6px 24px;
+                    position: relative;
+                    z-index: 5;
+                    height: 54px;
+                    border: 1px solid $secondary;
+                    border-radius: 100px;
+                }
+
+                &.slide {
+                    position: absolute;
+                    height: 54px;
+                    background: $secondary;
+                    border-radius: 100px;
+                    border: 1px solid $secondary;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    transition: 0.5s;
+                    opacity: 0;
+                }
+
+                &:nth-child(1).active~.slide,
+                &:nth-child(2).active~.slide,
+                &:nth-child(3).active~.slide {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .loans_slider {
+            padding-top: 17px;
+
+            .slick-track {
+                display: flex;
+            }
+
+            .slick-slide {
+                height: inherit;
+                padding: 52px;
+                background: $white;
+                border-radius: 20px;
+
+                @include media-breakpoint-down(sm) {
+                    padding: 44px 24px;
+                }
+            }
+
+            .slick-dots {
+                display: flex !important;
+                bottom: -30px;
+                list-style-type: none;
+                justify-content: center;
+
+                @include media-breakpoint-up(md) {
+                    justify-content: start;
+                }
+
+                li {
+                    margin: 0 4.5px;
+                    width: 13px;
+                    height: 13px;
+
+                    button:before {
+                        width: 13px;
+                        height: 13px;
+                    }
+                }
+
+                button {
+                    display: block;
+                    width: 13px;
+                    height: 13px;
+                    padding: 0;
+                    border: none;
+                    background-color: $secondary-light;
+                    text-indent: -9999px;
+                    border-radius: 50%;
+                }
+
+                li.slick-active button {
+                    opacity: 0.2;
+                }
+            }
+        }
+    }
+}
+
+section.vision {
+    padding: 132px 0;
+
+    .vision_heading_prefix {
+        position: relative;
+
+        &::before {
+            content: "Heat";
+            font-family: $font-brusheo;
+            position: absolute;
+            top: -1rem;
+            left: -11%;
+            color: $secondary;
+            font-size: 36px;
+            transform: rotate(-15deg);
+
+            @include media-breakpoint-down(sm) {
+                font-size: 30px;
+                top: -1.5rem;
+            }
+        }
+
+        &::after {
+            content: "";
+            background: url("data:image/svg+xml,%3Csvg width='21' height='16' viewBox='0 0 21 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.5 12.9993C4.46047 10.2782 6.6337 7.72811 8.21429 4.76275C8.44927 4.32189 8.74993 2.53078 8.78571 3.11544C8.9413 5.65706 17.4732 12.2271 18.5 10.2538' stroke='%239159E8' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E");
+            position: absolute;
+            bottom: 0;
+            left: -7%;
+            width: 21px;
+            height: 16px;
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        padding: 70px 0;
+    }
+
+    .vision_card {
+        border-radius: 20px;
+        min-height: 574px;
+        padding: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        text-align: center;
+
+        &.fairness {
+            background: imgUrl('vision-fairness.jpg') center;
+        }
+
+        &.accuracy {
+            background: imgUrl('vision-accuracy.jpg') center;
+        }
+
+        &.speed {
+            background: imgUrl('vision-speed.jpg') center;
+        }
+
+        background-size: cover;
+
+        .fancyText {
+            font-family: $font-brusheo;
+            font-size: 30px;
+            color: $primary;
+            transform: rotate(-15deg);
+        }
+
+        @include media-breakpoint-down(sm) {
+            min-height: 491px;
+        }
+    }
+}
+
+section.testimonials {
+    background: $light;
+    padding: 162px 0;
+
+    @include media-breakpoint-down(sm) {
+        padding: 70px 0;
+    }
+
+    .about_testimonials {
+        transition: 0.4s all;
+        position: relative;
+
+        .section_left {
+            background: $primary;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            padding: 120px 80px;
+
+            @include media-breakpoint-down(xl) {
+                padding: 120px 24px;
+            }
+
+            @include media-breakpoint-down(lg) {
+                padding: 0 64px 80px;
+            }
+
+            @include media-breakpoint-down(sm) {
+                padding: 0 24px 73px;
+            }
+
+            .hero_heading {
+                padding: 116px 0;
+
+                @include media-breakpoint-down(lg) {
+                    padding: 64px 0;
+                }
+
+                @include media-breakpoint-down(sm) {
+                    padding: 20px 0;
+                }
+            }
+
+            .hanging_superhero {
+                position: absolute;
+                top: 0;
+                right: 81px;
+                animation: bounce2 5s infinite;
+
+                @keyframes bounce2 {
+
+                    0%,
+                    20%,
+                    50%,
+                    80%,
+                    100% {
+                        transform: translateY(-30px);
+                    }
+
+                    40% {
+                        transform: translateY(-60px);
+                    }
+
+                    60% {
+                        transform: translateY(-45px);
+                    }
+                }
+
+                @include media-breakpoint-down(xl) {
+                    right: 1rem;
+                    width: 462px;
+                }
+
+                @include media-breakpoint-down(lg) {
+                    display: none;
+                }
+            }
+        }
+
+        .section_right {
+            overflow: hidden;
+
+            @include media-breakpoint-up(xl) {
+                position: absolute;
+                top: 0;
+                left: 100%;
+                width: 100%;
+                height: 100%;
+            }
+
+            #testimonial_slider {
+                height: 100%;
+
+                .slick-list,
+                .slick-track {
+                    @include media-breakpoint-up(lg) {
+                        height: 100%;
+                    }
+                }
+
+                .slick-track {
+                    display: flex !important;
+                }
+
+                .slick-slide {
+                    border-radius: 20px;
+                    background: $white;
+                    padding: 46px;
+                    height: inherit !important;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 0 16px;
+
+                    @include media-breakpoint-down(lg) {
+                        padding: 37px 24px;
+                        margin: 0 8px;
+                    }
+
+                    @include media-breakpoint-down(sm) {
+                        margin: 0 4px;
+                    }
+                }
+
+                .slick-dots {
+                    display: flex !important;
+                    bottom: -30px;
+                    list-style-type: none;
+                    justify-content: center;
+
+                    li {
+                        margin: 0 4.5px;
+                        width: 13px;
+                        height: 13px;
+
+                        button:before {
+                            width: 13px;
+                            height: 13px;
+                        }
+                    }
+
+                    button {
+                        display: block;
+                        width: 13px;
+                        height: 13px;
+                        padding: 0;
+                        border: none;
+                        text-indent: -9999px;
+                        border-radius: 50%;
+                        background-color: $light-grey;
+                        opacity: 0.3;
+                    }
+
+                    li.slick-active button {
+                        background-color: $secondary;
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.footer_contact {
+    background: $tertiary;
+    padding: 80px 0;
+
+    @include media-breakpoint-down(sm) {
+        padding: 40px 0;
+    }
+
+    .more_options {
+        background: imgUrl('banner_bottom.jpg');
+        background-size: cover;
+        padding: 24px 40px;
+        border-radius: 20px;
+        overflow: hidden;
+        color: $primary;
+        height: 100%;
+
+        @include media-breakpoint-only(md) {
+            padding: 40px 24px;
+        }
+    }
+}
+
+footer {
+    font-size: 12px;
+    background-color: $dark;
+    color: $light-grey;
+
+    @include media-breakpoint-down(lg) {
+        padding: 40px 0;
+    }
+
+    .capify {
+        padding: 18px 27px;
+        border-radius: 20px;
+        background: $green;
+    }
+}
