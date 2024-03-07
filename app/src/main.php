@@ -198,12 +198,12 @@
                 <div class="col-xl-4">
                     <div class="banner_right h-100 rounded-20">
                         <div class="text-center">
-                            <p class="font-articulat-heavy ls-2 fs-40 lh-1 text-white">Your Cosmetic Nurse Loan Specialist</p>
-                            <p class="py-4 fs-20 text-white">Training funding should be seamless!</p>
+                            <p class="font-articulat-heavy ls-2 fs-40 lh-1 text-secondary">Your Cosmetic Nurse Loan Specialist</p>
+                            <p class="py-4 fs-20 text-dark fw-900">Training funding should be seamless!</p>
                         </div>
                         <div class="row align-items-center justify-content-center">
                             <div class="col-auto">
-                                <a href="#form" class="btn btn-white d-inline-flex rounded-pill rounded-0 text-primary px-4 lh-1">Get Started</a>
+                                <a href="#form" class="btn btn-quaternary d-inline-flex rounded-pill rounded-0 text-white px-4 lh-1">Get Started</a>
                             </div>
                         </div>
                     </div>
