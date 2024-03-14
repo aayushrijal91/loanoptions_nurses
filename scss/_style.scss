@@ -77,7 +77,10 @@ header {
                     padding: 40px 20px;
                 }
 
-                #form-tab-2, #form-tab-3, #form-tab-4, #form-tab-5 {
+                #form-tab-2,
+                #form-tab-3,
+                #form-tab-4,
+                #form-tab-5 {
                     display: none;
                 }
 
@@ -275,7 +278,7 @@ header {
         }
 
         .banner_right {
-            background: imgUrl('banner_right.jpg') center top;
+            background: imgUrl('banner_right.jpg') center bottom;
             background-size: cover;
             display: flex;
             flex-direction: column;
@@ -284,16 +287,12 @@ header {
             padding: 60px 40px;
             position: relative;
 
-            @include media-breakpoint-down(xl) {
-                padding: 150px 60px 60px;
-            }
-
             @include media-breakpoint-down(lg) {
-                padding: 150px 20px 40px;
+                min-height: 600px;
             }
 
             @include media-breakpoint-down(sm) {
-                background: linear-gradient(180deg, rgba(0, 0, 0, 0), #211D1E), imgUrl('banner_right.jpg') center top;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0), #211D1E), imgUrl('banner_right.jpg') center;
             }
 
             .arrow {
@@ -402,7 +401,7 @@ section.equipment_loan {
 
         @include media-breakpoint-down(sm) {
             font-size: 18px;
-        padding: 24px 8px;
+            padding: 24px 8px;
         }
     }
 
@@ -821,7 +820,7 @@ section.footer_contact {
     }
 
     .more_options {
-        background: imgUrl('banner_bottom.jpg');
+        background: imgUrl('banner_bottom.jpg') right center;
         background-size: cover;
         padding: 24px 40px;
         border-radius: 20px;
@@ -831,6 +830,11 @@ section.footer_contact {
 
         @include media-breakpoint-only(md) {
             padding: 40px 24px;
+        }
+
+        @include media-breakpoint-down(sm) {
+            background: imgUrl('banner_bottom_sm.jpg') right center;
+            background-size: cover;
         }
     }
 }

@@ -617,13 +617,14 @@
         <div class="row gy-4">
             <div class="col-md-8">
                 <div class="more_options">
-                    <div>
+                    <div class="text-center text-md-start">
                         <p class="fs-40 font-articulat-heavy lh-3">More Options.</p>
                         <p class="fs-40 font-articulat-heavy lh-3">More <span class="text-quaternary">Nurses.</span></p>
+                        <p class="fs-18 fw-800 text-center d-md-none text-dark mt-4 lh-1">Training funding should be seamless!</p>
                     </div>
-                    <div class="row align-items-center pt-3">
-                        <div class="col">
-                            <p class="fs-20 fw-800">Training funding should be seamless!</p>
+                    <div class="row justify-content-center justify-content-md-start align-items-center pt-12 pt-md-3 gy-4">
+                        <div class="col-md d-none d-md-block">
+                            <p class="fs-20 fw-800 lh-1">Training funding should be seamless!</p>
                         </div>
 
                         <div class="col-auto">
